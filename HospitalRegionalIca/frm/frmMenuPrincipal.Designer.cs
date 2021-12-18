@@ -39,8 +39,24 @@ namespace HospitalRegionalIca
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.servicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.turnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.kardexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolXMesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambioDeTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cAsistenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.liquidacionGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asistenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inasistenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vacacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolVacacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -62,18 +78,19 @@ namespace HospitalRegionalIca
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnCompras = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnClientes = new System.Windows.Forms.Button();
+            this.btnPersonal = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnVentas = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnProductos = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
-            this.pContenedor = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblUsuario = new System.Windows.Forms.Label();
+            this.pContenedor = new System.Windows.Forms.Panel();
+            this.trabajadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -170,37 +187,167 @@ namespace HospitalRegionalIca
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
+            this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sToolStripMenuItem,
-            this.sToolStripMenuItem1});
+            this.sToolStripMenuItem1,
+            this.reporteToolStripMenuItem,
+            this.cAsistenciaToolStripMenuItem,
+            this.vacacionesToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1300, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1300, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // sToolStripMenuItem
             // 
-            this.sToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.sToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.personalToolStripMenuItem,
+            this.departamentoToolStripMenuItem,
+            this.servicioToolStripMenuItem,
+            this.usuarioToolStripMenuItem,
+            this.turnoToolStripMenuItem,
+            this.trabajadorToolStripMenuItem});
+            this.sToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.sToolStripMenuItem.Name = "sToolStripMenuItem";
-            this.sToolStripMenuItem.Size = new System.Drawing.Size(24, 20);
-            this.sToolStripMenuItem.Text = "s";
+            this.sToolStripMenuItem.Size = new System.Drawing.Size(72, 21);
+            this.sToolStripMenuItem.Text = "Archivos";
+            // 
+            // personalToolStripMenuItem
+            // 
+            this.personalToolStripMenuItem.Image = global::HospitalRegionalIca.Properties.Resources.Personal;
+            this.personalToolStripMenuItem.Name = "personalToolStripMenuItem";
+            this.personalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.personalToolStripMenuItem.Text = "Personal";
+            this.personalToolStripMenuItem.Click += new System.EventHandler(this.personalToolStripMenuItem_Click);
+            // 
+            // departamentoToolStripMenuItem
+            // 
+            this.departamentoToolStripMenuItem.Image = global::HospitalRegionalIca.Properties.Resources.Departamento;
+            this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.departamentoToolStripMenuItem.Text = "Departamento";
+            this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
+            // 
+            // servicioToolStripMenuItem
+            // 
+            this.servicioToolStripMenuItem.Image = global::HospitalRegionalIca.Properties.Resources.Servicio;
+            this.servicioToolStripMenuItem.Name = "servicioToolStripMenuItem";
+            this.servicioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.servicioToolStripMenuItem.Text = "Servicio";
+            this.servicioToolStripMenuItem.Click += new System.EventHandler(this.servicioToolStripMenuItem_Click);
+            // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.Image = global::HospitalRegionalIca.Properties.Resources.Usuario;
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
+            // 
+            // turnoToolStripMenuItem
+            // 
+            this.turnoToolStripMenuItem.Image = global::HospitalRegionalIca.Properties.Resources.Turno;
+            this.turnoToolStripMenuItem.Name = "turnoToolStripMenuItem";
+            this.turnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.turnoToolStripMenuItem.Text = "Turno";
+            this.turnoToolStripMenuItem.Click += new System.EventHandler(this.turnoToolStripMenuItem_Click);
             // 
             // sToolStripMenuItem1
             // 
             this.sToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sToolStripMenuItem2});
+            this.sToolStripMenuItem2,
+            this.kardexToolStripMenuItem,
+            this.rolXMesToolStripMenuItem,
+            this.cambioDeTurnoToolStripMenuItem});
             this.sToolStripMenuItem1.Name = "sToolStripMenuItem1";
-            this.sToolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
-            this.sToolStripMenuItem1.Text = "s";
+            this.sToolStripMenuItem1.Size = new System.Drawing.Size(73, 21);
+            this.sToolStripMenuItem1.Text = "Procesos";
             // 
             // sToolStripMenuItem2
             // 
-            this.sToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(183)))), ((int)(((byte)(92)))));
+            this.sToolStripMenuItem2.BackColor = System.Drawing.Color.White;
+            this.sToolStripMenuItem2.Image = global::HospitalRegionalIca.Properties.Resources.Documento;
             this.sToolStripMenuItem2.Name = "sToolStripMenuItem2";
-            this.sToolStripMenuItem2.Size = new System.Drawing.Size(79, 22);
-            this.sToolStripMenuItem2.Text = "s";
+            this.sToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.sToolStripMenuItem2.Text = "Documento";
+            this.sToolStripMenuItem2.Click += new System.EventHandler(this.sToolStripMenuItem2_Click);
+            // 
+            // kardexToolStripMenuItem
+            // 
+            this.kardexToolStripMenuItem.Name = "kardexToolStripMenuItem";
+            this.kardexToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kardexToolStripMenuItem.Text = "Kardex";
+            // 
+            // rolXMesToolStripMenuItem
+            // 
+            this.rolXMesToolStripMenuItem.Name = "rolXMesToolStripMenuItem";
+            this.rolXMesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rolXMesToolStripMenuItem.Text = "Rol x Mes";
+            // 
+            // cambioDeTurnoToolStripMenuItem
+            // 
+            this.cambioDeTurnoToolStripMenuItem.Name = "cambioDeTurnoToolStripMenuItem";
+            this.cambioDeTurnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cambioDeTurnoToolStripMenuItem.Text = "Cambio de Turno";
+            // 
+            // reporteToolStripMenuItem
+            // 
+            this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
+            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(73, 21);
+            this.reporteToolStripMenuItem.Text = "Reportes";
+            // 
+            // cAsistenciaToolStripMenuItem
+            // 
+            this.cAsistenciaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.liquidacionGToolStripMenuItem,
+            this.asistenciaToolStripMenuItem,
+            this.inasistenciaToolStripMenuItem});
+            this.cAsistenciaToolStripMenuItem.Name = "cAsistenciaToolStripMenuItem";
+            this.cAsistenciaToolStripMenuItem.Size = new System.Drawing.Size(101, 21);
+            this.cAsistenciaToolStripMenuItem.Text = "C. Asistencias";
+            // 
+            // liquidacionGToolStripMenuItem
+            // 
+            this.liquidacionGToolStripMenuItem.Name = "liquidacionGToolStripMenuItem";
+            this.liquidacionGToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.liquidacionGToolStripMenuItem.Text = "Liquidacion_G";
+            // 
+            // asistenciaToolStripMenuItem
+            // 
+            this.asistenciaToolStripMenuItem.Name = "asistenciaToolStripMenuItem";
+            this.asistenciaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.asistenciaToolStripMenuItem.Text = "Asistencia";
+            // 
+            // inasistenciaToolStripMenuItem
+            // 
+            this.inasistenciaToolStripMenuItem.Name = "inasistenciaToolStripMenuItem";
+            this.inasistenciaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.inasistenciaToolStripMenuItem.Text = "Inasistencia";
+            // 
+            // vacacionesToolStripMenuItem
+            // 
+            this.vacacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rolVacacionesToolStripMenuItem});
+            this.vacacionesToolStripMenuItem.Name = "vacacionesToolStripMenuItem";
+            this.vacacionesToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.vacacionesToolStripMenuItem.Text = "Vacaciones";
+            // 
+            // rolVacacionesToolStripMenuItem
+            // 
+            this.rolVacacionesToolStripMenuItem.Name = "rolVacacionesToolStripMenuItem";
+            this.rolVacacionesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.rolVacacionesToolStripMenuItem.Text = "Rol Vacaciones";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(45, 21);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // panel3
             // 
@@ -219,7 +366,7 @@ namespace HospitalRegionalIca
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.btnCompras);
             this.panel3.Controls.Add(this.panel6);
-            this.panel3.Controls.Add(this.btnClientes);
+            this.panel3.Controls.Add(this.btnPersonal);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.btnVentas);
             this.panel3.Controls.Add(this.panel1);
@@ -484,22 +631,23 @@ namespace HospitalRegionalIca
             this.panel6.Size = new System.Drawing.Size(5, 32);
             this.panel6.TabIndex = 6;
             // 
-            // btnClientes
+            // btnPersonal
             // 
-            this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClientes.FlatAppearance.BorderSize = 0;
-            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(0)))));
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientes.ForeColor = System.Drawing.Color.White;
-            this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
-            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(6, 195);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(194, 32);
-            this.btnClientes.TabIndex = 5;
-            this.btnClientes.Text = "Clientes";
-            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPersonal.FlatAppearance.BorderSize = 0;
+            this.btnPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(0)))));
+            this.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonal.ForeColor = System.Drawing.Color.White;
+            this.btnPersonal.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonal.Image")));
+            this.btnPersonal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonal.Location = new System.Drawing.Point(6, 195);
+            this.btnPersonal.Name = "btnPersonal";
+            this.btnPersonal.Size = new System.Drawing.Size(194, 32);
+            this.btnPersonal.TabIndex = 5;
+            this.btnPersonal.Text = "Personal";
+            this.btnPersonal.UseVisualStyleBackColor = true;
+            this.btnPersonal.Click += new System.EventHandler(this.btnPersonal_Click);
             // 
             // panel5
             // 
@@ -564,6 +712,17 @@ namespace HospitalRegionalIca
             this.panel4.Size = new System.Drawing.Size(1095, 40);
             this.panel4.TabIndex = 3;
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(870, 14);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(141, 17);
+            this.lblUsuario.TabIndex = 7;
+            this.lblUsuario.Text = "PEÑA RUIZ HUMBERTO";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -592,33 +751,30 @@ namespace HospitalRegionalIca
             this.lblHora.ForeColor = System.Drawing.Color.White;
             this.lblHora.Location = new System.Drawing.Point(-8, -2);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(166, 44);
+            this.lblHora.Size = new System.Drawing.Size(165, 44);
             this.lblHora.TabIndex = 0;
             this.lblHora.Text = "16:33:00";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pContenedor
             // 
             this.pContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(238)))), ((int)(((byte)(241)))));
+            this.pContenedor.BackgroundImage = global::HospitalRegionalIca.Properties.Resources.main_bg08;
             this.pContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pContenedor.Location = new System.Drawing.Point(205, 69);
             this.pContenedor.Name = "pContenedor";
             this.pContenedor.Size = new System.Drawing.Size(1095, 541);
             this.pContenedor.TabIndex = 4;
             // 
-            // timer1
+            // trabajadorToolStripMenuItem
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(870, 14);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(141, 17);
-            this.lblUsuario.TabIndex = 7;
-            this.lblUsuario.Text = "PEÑA RUIZ HUMBERTO";
+            this.trabajadorToolStripMenuItem.Name = "trabajadorToolStripMenuItem";
+            this.trabajadorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.trabajadorToolStripMenuItem.Text = "Trabajador";
+            this.trabajadorToolStripMenuItem.Click += new System.EventHandler(this.trabajadorToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -634,6 +790,7 @@ namespace HospitalRegionalIca
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "  ";
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.pBarraTitulo.ResumeLayout(false);
@@ -680,7 +837,7 @@ namespace HospitalRegionalIca
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button btnPersonal;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Panel pSubMenuReportes;
@@ -699,6 +856,23 @@ namespace HospitalRegionalIca
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.ToolStripMenuItem personalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem departamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem servicioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem turnoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kardexToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rolXMesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambioDeTurnoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cAsistenciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem liquidacionGToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asistenciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inasistenciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vacacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rolVacacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trabajadorToolStripMenuItem;
     }
 }
 

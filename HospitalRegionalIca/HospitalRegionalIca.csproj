@@ -47,21 +47,83 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion\clsUsuarioConexion.cs" />
-    <Compile Include="Conexion\clsDashboarConexion.cs" />
+    <Compile Include="Datos\clsPersonalDatos.cs" />
+    <Compile Include="Datos\clsCategoriaDatos.cs" />
+    <Compile Include="Datos\clsCargoDatos.cs" />
+    <Compile Include="Datos\clsTrabajadorDatos.cs" />
+    <Compile Include="Datos\clsServicioDatos.cs" />
+    <Compile Include="Datos\clsUsuarioDatos.cs" />
+    <Compile Include="Entidad\clsPapeleta.cs" />
+    <Compile Include="Entidad\clsTrabajador.cs" />
+    <Compile Include="Entidad\clsPersonal.cs" />
+    <Compile Include="Entidad\clsRolUsuario.cs" />
+    <Compile Include="Entidad\clsServicio.cs" />
+    <Compile Include="Entidad\clsTipoPapeleta.cs" />
+    <Compile Include="Entidad\clsMotivo.cs" />
+    <Compile Include="Entidad\clsUsuario.cs" />
+    <Compile Include="Entidad\clsCategoria.cs" />
+    <Compile Include="Entidad\clsCargo.cs" />
+    <Compile Include="Datos\clsDepartamentoDatos.cs" />
+    <Compile Include="Entidad\clsDepartamento.cs" />
+    <Compile Include="Datos\clsLoginAcceso.cs" />
+    <Compile Include="Conexion\clsConexionBd.cs" />
+    <Compile Include="Datos\clsUsuarioConexion.cs" />
+    <Compile Include="Datos\clsDashboarConexion.cs" />
     <Compile Include="Datos\clsDashboard.cs" />
     <Compile Include="Datos\clsUsuarioAcceder.cs" />
+    <Compile Include="frm\frmTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmTrabajador.Designer.cs">
+      <DependentUpon>frmTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmDocumento.Designer.cs">
+      <DependentUpon>frmDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmkardex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmkardex.Designer.cs">
+      <DependentUpon>frmkardex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmTurno.Designer.cs">
+      <DependentUpon>frmTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmServicio.Designer.cs">
+      <DependentUpon>frmServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmDepartamento.Designer.cs">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm\frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm\frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm\frmFUA.cs">
+    <Compile Include="frm\frmPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm\frmFUA.Designer.cs">
-      <DependentUpon>frmFUA.cs</DependentUpon>
+    <Compile Include="frm\frmPersonal.Designer.cs">
+      <DependentUpon>frmPersonal.cs</DependentUpon>
     </Compile>
     <Compile Include="frm\frmLogin.cs">
       <SubType>Form</SubType>
@@ -77,6 +139,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm\frmTrabajador.resx">
+      <DependentUpon>frmTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmDocumento.resx">
+      <DependentUpon>frmDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmkardex.resx">
+      <DependentUpon>frmkardex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmTurno.resx">
+      <DependentUpon>frmTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmServicio.resx">
+      <DependentUpon>frmServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmDepartamento.resx">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm\frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm\frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmPersonal.resx">
+      <DependentUpon>frmPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -123,6 +209,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_bg08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Personal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Departamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Servicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_bg07.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

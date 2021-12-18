@@ -90,7 +90,7 @@ namespace HospitalRegionalIca
         {
             if (MessageBox.Show("Esta seguro de cerrar la Aplicacion?", "Warning",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                this.Close();
+                this.Dispose();
                 //Application.Exit();
         }
 
@@ -152,10 +152,49 @@ namespace HospitalRegionalIca
             lblUsuario.Text = objUsuarioAcceder.ApellidoPaterno + " " + objUsuarioAcceder.ApellidoMaterno + " " + objUsuarioAcceder.Nombres;
         }
 
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
 
+        private void btnPersonal_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmPersonal>();
+        }
 
+        private void personalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmPersonal>();
+        }
 
+        private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmDepartamento>();
+        }
 
+        private void servicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmServicio>();
+        }
 
+        private void turnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmTurno>();
+        }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmUsuario>();
+        }
+
+        private void sToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmDocumento>();
+        }
+
+        private void trabajadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmTrabajador>();
+        }
     }
 }

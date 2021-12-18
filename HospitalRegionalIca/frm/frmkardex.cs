@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HospitalRegionalIca
 {
-    public partial class frmFUA : Form
+    public partial class frmkardex : Form
     {
-        public frmFUA()
+        public frmkardex()
         {
             InitializeComponent();
         }
